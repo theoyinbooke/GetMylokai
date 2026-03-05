@@ -375,7 +375,7 @@ Material changes will be communicated through the app or through the App Store u
 If you have any questions, concerns, or requests regarding this Privacy Policy, Terms & Conditions, or Disclaimers, please contact:
 
 **Developer:** Olanrewaju Oyinbooke
-**Email:** theoyinbooke@gmail.com
+**Email:** oyinbookeola@outlook.com
 
 For EU-specific inquiries, you may also contact your local Data Protection Authority, although we note that no personal data is processed by Mylokai.
 
