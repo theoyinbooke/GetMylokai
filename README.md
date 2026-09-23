@@ -26,7 +26,7 @@
 
 Mylokai is a privacy-first artificial intelligence chat application designed to operate entirely on your device. We are committed to protecting your privacy. **We do not collect, store, transmit, process, sell, share, or otherwise handle any personal data, usage data, analytics, telemetry, or any other information of any kind from our users.**
 
-Mylokai does not use any cloud AI service. Every AI model runs on your device. Apart from downloading the models you choose (Section 1.5), the only feature that sends anything from your conversations off your device is the **optional web search** described in Section 1.4, which is off by default.
+Mylokai does not use any cloud AI service. Every AI model runs on your device. Apart from downloading the models you choose (Section 1.5), the only features that send anything from your conversations off your device are the **optional web search** (Section 1.4) and the **optional weather lookup** (Section 1.4a), both off by default.
 
 ### 1.2 Data Collection
 
@@ -42,7 +42,7 @@ Mylokai does not use any cloud AI service. Every AI model runs on your device. A
 - **No biometric data** is collected or processed.
 - **No health or fitness data** is collected or processed.
 - **No financial or payment data** is collected or processed.
-- **No browsing history, search queries, or interaction data** is collected by us. If you turn on the optional web search, search queries are sent directly to Brave Search as described in Section 1.4.
+- **No browsing history, search queries, or interaction data** is collected by us. If you turn on the optional web search, search queries are sent directly to Brave Search as described in Section 1.4. If you turn on the optional weather lookup, the city name you ask about is sent to Apple as described in Section 1.4a.
 
 ### 1.3 On-Device Processing
 
@@ -57,7 +57,7 @@ All AI inference, conversation processing, memory extraction, document analysis,
 
 ### 1.4 Optional Web Search (Brave Search)
 
-Mylokai does not connect to any cloud AI provider. It offers one **optional** feature that uses the internet during a conversation: web search through the Brave Search API, using **your own Brave Search API key**. This feature is:
+Mylokai does not connect to any cloud AI provider. Two **optional** features use the internet during a conversation: web search through the Brave Search API, using **your own Brave Search API key**, described here, and Weather, described in Section 1.4a. Web search is:
 
 - **Off by default** — the app is fully functional without it.
 - **User-initiated** — you must turn it on in Settings and enter your own Brave Search API key.
@@ -70,6 +70,19 @@ Mylokai does not connect to any cloud AI provider. It offers one **optional** fe
 - Brave receives the query, your API key, and your device's network information (such as its IP address). Brave states that it keeps a record of queries submitted through a Search API account for up to 90 days for billing and troubleshooting.
 - Your API key is stored only in your device's Keychain and is sent only to Brave.
 - **We are not responsible** for how Brave handles, stores, or retains data. Brave Search API privacy notice: https://api-dashboard.search.brave.com/privacy-policy
+
+### 1.4a Optional Weather (Apple Weather)
+
+If you turn on Weather in Settings, the assistant can look up current conditions and a short forecast for **a city you name**:
+
+- Only the **city name** (for example "Chicago") is sent: to Apple Maps to find the place, and the resulting coordinates to Apple Weather (WeatherKit) for the forecast.
+- Your device's location is **never** used or sent, and Mylokai does not request location permission.
+- Weather data is provided by Apple Weather. Apple's privacy policy applies: https://www.apple.com/legal/privacy/ — data sources: https://weatherkit.apple.com/legal-attribution.html
+- Weather is off by default, and you can turn it off at any time.
+
+### 1.4b Optional Calendar (On Device)
+
+If you turn on Calendar in Settings and allow access, the assistant can read your calendar events **on your device** to answer questions about your schedule. Calendar data is used only by the on-device AI model and is **never** sent off your device or to us. Calendar is off by default, and you can turn it off or revoke access at any time in your device's Settings.
 
 ### 1.5 Model Downloads
 
@@ -179,6 +192,8 @@ We reserve the right to modify these Terms and Conditions at any time. Changes w
 
 **THE DEVELOPER EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE.**
 
+**If you turn on the optional Weather feature: YOUR USE OF THIS REAL TIME WEATHER GUIDANCE APPLICATION OR WEBSITE IS AT YOUR SOLE RISK. WEATHER DATA MAY NOT BE ACCURATE.**
+
 ### 3.3 Limitation of Liability
 
 **TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY:**
@@ -205,6 +220,7 @@ You agree to defend, indemnify, and hold harmless the Developer from and against
 The Developer is not responsible for and makes no representations or warranties regarding any third-party services, including but not limited to:
 
 - Brave Search, when you turn on the optional web search
+- Apple Weather and Apple Maps, when you turn on the optional weather lookup
 - HuggingFace model hosting and downloads
 - The publishers of the open AI models listed in the app
 - Apple's FoundationModels framework and on-device AI capabilities
@@ -344,6 +360,7 @@ Mylokai does **not** track users across other companies' apps or websites. The a
 
 In accordance with Apple's App Privacy requirements:
 - **Search History (optional web search only):** if you turn on web search, search queries are sent to Brave Search to provide results. This data is not linked to your identity and is not used to track you.
+- **Weather (optional):** if you turn on Weather, the city name you ask about is sent to Apple only to answer that request. It is not your device's location, is not linked to your identity, and is not used to track you.
 - **No other data is collected.**
 - **Data Not Used to Track You:** No tracking occurs.
 
@@ -355,6 +372,7 @@ Mylokai may request the following device permissions, which are used exclusively
 - **Speech Recognition:** Used solely for on-device transcription of voice input. If on-device recognition is unavailable, voice input is turned off rather than sent to a server.
 - **Camera:** Used solely to capture documents and images you choose to attach in a chat. Images are processed on your device.
 - **Photo Library:** Used solely to attach images you choose. Images are processed on your device.
+- **Calendars:** Requested only if you turn on Calendar in Settings. Events are read on your device to answer schedule questions and are never transmitted.
 
 These permissions are optional and the app is fully functional without them.
 
@@ -393,5 +411,5 @@ For users in the European Union, nothing in these terms affects your statutory r
 
 *This document was last reviewed and updated on September 22, 2026.*
 
-*Mylokai is an independent application and is not affiliated with, endorsed by, or sponsored by Apple Inc., Brave Software, Hugging Face, or the publishers of the AI models listed in the app. Model and company names and logos are shown only to identify the source of each model. Apple Intelligence is a trademark of Apple Inc.*
+*Mylokai is an independent application and is not affiliated with, endorsed by, or sponsored by Apple Inc., Brave Software, Hugging Face, or the publishers of the AI models listed in the app. Model and company names and logos are shown only to identify the source of each model. Apple Intelligence and Apple Weather are trademarks of Apple Inc.*
 
