@@ -1,7 +1,7 @@
 # Mylokai — Privacy Policy, Terms & Conditions, and Legal Disclaimers
 
 **Effective Date:** March 5, 2026
-**Last Updated:** September 22, 2026
+**Last Updated:** September 23, 2026
 **App Name:** Mylokai (MyLokAI)
 **Developer:** Olanrewaju Oyinbooke ("Developer", "we", "us", "our")
 **Contact:** oyinbookeola@outlook.com
@@ -26,7 +26,7 @@
 
 Mylokai is a privacy-first artificial intelligence chat application designed to operate entirely on your device. We are committed to protecting your privacy. **We do not collect, store, transmit, process, sell, share, or otherwise handle any personal data, usage data, analytics, telemetry, or any other information of any kind from our users.**
 
-Mylokai does not use any cloud AI service. Every AI model runs on your device. Apart from downloading the models you choose (Section 1.5), the only features that send anything from your conversations off your device are the **optional web search** (Section 1.4) and the **optional weather lookup** (Section 1.4a), both off by default.
+Mylokai does not use any cloud AI service. Every AI model runs on your device. Apart from downloading the models you choose (Section 1.5), the only features that send anything from your conversations off your device are the **optional web search** (Section 1.4), the **optional weather lookup** (Section 1.4a) and **optional iCloud Sync** (Section 1.4c), which keeps your data in your own private iCloud. All three are off by default.
 
 ### 1.2 Data Collection
 
@@ -43,21 +43,22 @@ Mylokai does not use any cloud AI service. Every AI model runs on your device. A
 - **No health or fitness data** is collected or processed.
 - **No financial or payment data** is collected or processed.
 - **No browsing history, search queries, or interaction data** is collected by us. If you turn on the optional web search, search queries are sent directly to Brave Search as described in Section 1.4. If you turn on the optional weather lookup, the city name you ask about is sent to Apple as described in Section 1.4a.
+- **Your iCloud data is not collected by us.** If you turn on the optional iCloud Sync, your data is stored in your own private iCloud account as described in Section 1.4c. We cannot access it.
 
 ### 1.3 On-Device Processing
 
 All AI inference, conversation processing, memory extraction, document analysis, speech recognition, and any other data processing performed by Mylokai occurs **exclusively on your device**. Specifically:
 
-- **Conversations** are stored only in the local on-device database (Apple SwiftData) and are never transmitted to any server, cloud service, or third party.
+- **Conversations** are stored in the local on-device database (Apple SwiftData) and are never transmitted to any server, cloud service, or third party, except to your own private iCloud if you turn on iCloud Sync (Section 1.4c).
 - **AI model inference** using Apple's FoundationModels framework and MLX models runs entirely on-device using your device's Neural Engine and GPU.
-- **Memory entries** (facts and preferences the app extracts from conversations) are stored only in the local on-device database and are never transmitted externally.
-- **Documents** you upload (PDFs, images, text files) are processed on-device and are never uploaded to any server.
+- **Memory entries** (facts and preferences the app extracts from conversations) are stored in the local on-device database and are never transmitted externally, except to your own private iCloud if you turn on iCloud Sync (Section 1.4c).
+- **Documents** you attach (PDFs, images, text files) are processed on your device and are never sent to us or to any third party. If you turn on iCloud Sync, the text read from them and the images and page previews kept with your messages are stored in your own private iCloud (Section 1.4c).
 - **Voice input** is processed using Apple's on-device speech recognition and is never transmitted to any server. If on-device recognition is not available for your language or device, voice input is turned off rather than sent to a server.
-- **Persona configurations** and **app settings** are stored only on your device.
+- **Persona configurations** are stored on your device, and also in your own private iCloud if you turn on iCloud Sync. **App settings** are stored only on your device.
 
 ### 1.4 Optional Web Search (Brave Search)
 
-Mylokai does not connect to any cloud AI provider. Two **optional** features use the internet during a conversation: web search through the Brave Search API, using **your own Brave Search API key**, described here, and Weather, described in Section 1.4a. Web search is:
+Mylokai does not connect to any cloud AI provider. Two **optional** features use the internet during a conversation: web search through the Brave Search API, using **your own Brave Search API key**, described here, and Weather, described in Section 1.4a. (Optional iCloud Sync, Section 1.4c, stores your data in your own iCloud but does not take part in conversations.) Web search is:
 
 - **Off by default** — the app is fully functional without it.
 - **User-initiated** — you must turn it on in Settings and enter your own Brave Search API key.
@@ -82,7 +83,18 @@ If you turn on Weather in Settings, the assistant can look up current conditions
 
 ### 1.4b Optional Calendar (On Device)
 
-If you turn on Calendar in Settings and allow access, the assistant can read your calendar events **on your device** to answer questions about your schedule. Calendar data is used only by the on-device AI model and is **never** sent off your device or to us. Calendar is off by default, and you can turn it off or revoke access at any time in your device's Settings.
+If you turn on Calendar in Settings and allow access, the assistant can read your calendar events **on your device** to answer questions about your schedule. Calendar data is read only by the on-device AI model and is **never** sent to us or anywhere by the Calendar feature. The assistant's replies may mention your events; if you turn on iCloud Sync, those replies are stored in your own private iCloud like the rest of the conversation. Calendar is off by default, and you can turn it off or revoke access at any time in your device's Settings.
+
+### 1.4c Optional iCloud Sync
+
+If you turn on iCloud Sync in Settings, Mylokai keeps your data in **your own private iCloud database** (Apple's CloudKit), so it appears on your other devices signed in to the same iCloud account that also have sync turned on.
+
+- **What syncs:** conversations and messages, images you attach, page previews and text read from files you attach, memories, your personas, and which replies used Apple Weather (the city you asked about and when, never the weather data). To remember which memories you deleted, so they are not suggested again, Mylokai keeps a one-way digest of each deleted memory's label, never the label itself.
+- **What stays on each device:** downloaded AI models, app settings, your Brave Search API key (which stays in the device's Keychain), and diagnostics.
+- **Who can see it:** your private iCloud database belongs to your Apple Account; we have **no access** to it and never receive any of it. Apple's privacy policy applies to iCloud: https://www.apple.com/legal/privacy/
+- **Encryption:** message text, titles, text read from files, memories and personas are **end-to-end encrypted** with keys only your devices hold. Images you attach and page previews of attached PDFs, together with their file names, are protected by iCloud's standard data protection, or end-to-end encryption if you turn on Advanced Data Protection for iCloud.
+- **Storage:** synced data counts toward your iCloud storage.
+- **Your control:** sync is off by default and is turned on separately on each device. Turning it off keeps everything on that device. Deleting a conversation, memory or persona on one device deletes it on your other devices with sync on. To remove Mylokai's data from iCloud, first turn off iCloud Sync on every device, then delete it in your iCloud storage settings; a device that still has sync on may upload its copy again. If you sign out of iCloud, data that synced may be removed from that device; it remains in iCloud until you delete it there.
 
 ### 1.5 Model Downloads
 
@@ -90,7 +102,7 @@ When you download AI models from the in-app model catalog, these models are down
 
 ### 1.6 Data Storage and Security
 
-- All app data is stored locally on your device using Apple's SwiftData framework and iOS Keychain.
+- All app data is stored locally on your device using Apple's SwiftData framework and iOS Keychain. If you turn on iCloud Sync (Section 1.4c), a copy of your conversations, memories and personas is also kept in your own private iCloud.
 - Data is protected by iOS's built-in encryption and security features, including device passcode, Face ID, and Touch ID protections.
 - We do not have access to any data stored on your device.
 - If you delete the app, all locally stored data (conversations, memories, settings, and models downloaded to the app's own storage) is permanently deleted. Models stored in a folder you chose yourself (for example, a folder shared with other apps) remain there until you delete them.
@@ -107,7 +119,7 @@ Mylokai is not directed at children under the age of 13 (or the applicable age o
 
 ### 1.9 Data Retention
 
-Since we collect no data, there is no data retention policy applicable to us. All data created by the app exists only on your device and is under your exclusive control. You may delete any or all data at any time through the app's settings or by deleting the app.
+Since we collect no data, there is no data retention policy applicable to us. All data created by the app exists only on your device, and in your own private iCloud if you turn on iCloud Sync, and is under your exclusive control. You may delete any or all data at any time through the app's settings, by deleting the app, or, for iCloud, as described in Section 1.4c.
 
 ### 1.10 Data Portability
 
@@ -221,6 +233,7 @@ The Developer is not responsible for and makes no representations or warranties 
 
 - Brave Search, when you turn on the optional web search
 - Apple Weather and Apple Maps, when you turn on the optional weather lookup
+- Apple iCloud, when you turn on the optional iCloud Sync
 - HuggingFace model hosting and downloads
 - The publishers of the open AI models listed in the app
 - Apple's FoundationModels framework and on-device AI capabilities
@@ -259,7 +272,7 @@ As Mylokai **does not collect, process, store, or transmit any personal data**, 
 **Data Subject Rights (Articles 15-22):** Since no personal data is collected or processed:
 - **Right of Access (Article 15):** There is no data held by us to access.
 - **Right to Rectification (Article 16):** There is no data held by us to rectify.
-- **Right to Erasure / Right to Be Forgotten (Article 17):** There is no data held by us to erase. All data exists solely on your device and can be deleted by you at any time.
+- **Right to Erasure / Right to Be Forgotten (Article 17):** There is no data held by us to erase. All data exists on your device, and in your own private iCloud if you turn on iCloud Sync, and can be deleted by you at any time (in the app, by deleting the app, or for iCloud as described in Section 1.4c).
 - **Right to Restriction of Processing (Article 18):** No processing of personal data occurs.
 - **Right to Data Portability (Article 20):** All your data is already on your device. The app provides an export feature for your convenience.
 - **Right to Object (Article 21):** No processing of personal data occurs to which you could object.
@@ -361,18 +374,19 @@ Mylokai does **not** track users across other companies' apps or websites. The a
 In accordance with Apple's App Privacy requirements:
 - **Search History (optional web search only):** if you turn on web search, search queries are sent to Brave Search to provide results. This data is not linked to your identity and is not used to track you.
 - **Weather (optional):** if you turn on Weather, the city name you ask about is sent to Apple only to answer that request. It is not your device's location, is not linked to your identity, and is not used to track you.
+- **iCloud Sync (optional):** synced data is stored in your own private iCloud account, which we cannot access, so it is not collected by us.
 - **No other data is collected.**
 - **Data Not Used to Track You:** No tracking occurs.
 
 ### 5.3 Required Device Permissions
 
-Mylokai may request the following device permissions, which are used exclusively for on-device functionality:
+Mylokai may request the following device permissions, which are used for on-device functionality:
 
 - **Microphone Access:** Used solely for on-device speech-to-text input. Audio is processed locally and is never transmitted externally.
 - **Speech Recognition:** Used solely for on-device transcription of voice input. If on-device recognition is unavailable, voice input is turned off rather than sent to a server.
-- **Camera:** Used solely to capture documents and images you choose to attach in a chat. Images are processed on your device.
-- **Photo Library:** Used solely to attach images you choose. Images are processed on your device.
-- **Calendars:** Requested only if you turn on Calendar in Settings. Events are read on your device to answer schedule questions and are never transmitted.
+- **Camera:** Used solely to capture documents and images you choose to attach in a chat. Images are processed on your device and stored with the conversation, including in your private iCloud if you turn on iCloud Sync.
+- **Photo Library:** Used solely to attach images you choose. Images are processed on your device and stored with the conversation, including in your private iCloud if you turn on iCloud Sync.
+- **Calendars:** Requested only if you turn on Calendar in Settings. Events are read on your device to answer schedule questions and are never transmitted by the Calendar feature. Replies that mention them are stored like the rest of the conversation, including in your private iCloud if you turn on iCloud Sync.
 
 These permissions are optional and the app is fully functional without them.
 
@@ -409,7 +423,7 @@ For users in the European Union, nothing in these terms affects your statutory r
 
 ---
 
-*This document was last reviewed and updated on September 22, 2026.*
+*This document was last reviewed and updated on September 23, 2026.*
 
 *Mylokai is an independent application and is not affiliated with, endorsed by, or sponsored by Apple Inc., Brave Software, Hugging Face, or the publishers of the AI models listed in the app. Model and company names and logos are shown only to identify the source of each model. Apple Intelligence and Apple Weather are trademarks of Apple Inc.*
 
