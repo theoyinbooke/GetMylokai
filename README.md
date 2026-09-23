@@ -1,10 +1,10 @@
 # Mylokai — Privacy Policy, Terms & Conditions, and Legal Disclaimers
 
 **Effective Date:** March 5, 2026
-**Last Updated:** March 5, 2026
-**App Name:** Mylokai
+**Last Updated:** September 22, 2026
+**App Name:** Mylokai (MyLokAI)
 **Developer:** Olanrewaju Oyinbooke ("Developer", "we", "us", "our")
-**Contact:** theoyinbooke@gmail.com
+**Contact:** oyinbookeola@outlook.com
 
 ---
 
@@ -26,12 +26,14 @@
 
 Mylokai is a privacy-first artificial intelligence chat application designed to operate entirely on your device. We are committed to protecting your privacy. **We do not collect, store, transmit, process, sell, share, or otherwise handle any personal data, usage data, analytics, telemetry, or any other information of any kind from our users.**
 
+Mylokai does not use any cloud AI service. Every AI model runs on your device. Apart from downloading the models you choose (Section 1.5), the only feature that sends anything from your conversations off your device is the **optional web search** described in Section 1.4, which is off by default.
+
 ### 1.2 Data Collection
 
 **We collect no data whatsoever.** Specifically:
 
 - **No personal information** is collected (name, email, phone number, address, date of birth, or any other personally identifiable information).
-- **No usage data** is collected (app usage patterns, session duration, feature usage, crash reports, or performance metrics).
+- **No usage data** is collected (app usage patterns, session duration, feature usage, crash reports, or performance metrics). Crash and hang reports that Apple's MetricKit provides stay on your device; they reach us only if you choose to share one with us.
 - **No analytics or telemetry** is collected, transmitted, or processed.
 - **No device information** is collected (device model, operating system version, unique device identifiers, IP addresses, or hardware specifications).
 - **No location data** is collected (GPS, Wi-Fi-based location, or IP-based geolocation).
@@ -40,7 +42,7 @@ Mylokai is a privacy-first artificial intelligence chat application designed to 
 - **No biometric data** is collected or processed.
 - **No health or fitness data** is collected or processed.
 - **No financial or payment data** is collected or processed.
-- **No browsing history, search queries, or interaction data** is collected or transmitted.
+- **No browsing history, search queries, or interaction data** is collected by us. If you turn on the optional web search, search queries are sent directly to Brave Search as described in Section 1.4.
 
 ### 1.3 On-Device Processing
 
@@ -50,30 +52,24 @@ All AI inference, conversation processing, memory extraction, document analysis,
 - **AI model inference** using Apple's FoundationModels framework and MLX models runs entirely on-device using your device's Neural Engine and GPU.
 - **Memory entries** (facts and preferences the app extracts from conversations) are stored only in the local on-device database and are never transmitted externally.
 - **Documents** you upload (PDFs, images, text files) are processed on-device and are never uploaded to any server.
-- **Voice input** is processed using Apple's on-device Speech framework and is never transmitted to any server.
+- **Voice input** is processed using Apple's on-device speech recognition and is never transmitted to any server. If on-device recognition is not available for your language or device, voice input is turned off rather than sent to a server.
 - **Persona configurations** and **app settings** are stored only on your device.
 
-### 1.4 Third-Party Cloud AI Services (Optional, User-Initiated)
+### 1.4 Optional Web Search (Brave Search)
 
-Mylokai provides an **optional** feature that allows users to connect to third-party cloud AI providers (including but not limited to OpenAI, Anthropic, and Google) using **the user's own API keys**. This feature is:
+Mylokai does not connect to any cloud AI provider. It offers one **optional** feature that uses the internet during a conversation: web search through the Brave Search API, using **your own Brave Search API key**. This feature is:
 
-- **Entirely optional** — the app is fully functional without it.
-- **User-initiated** — the user must manually enter their own API keys and explicitly choose to use a cloud model.
-- **Clearly disclosed** — a privacy notice is shown before the first use of any cloud model, informing the user that their messages will leave the device.
+- **Off by default** — the app is fully functional without it.
+- **User-initiated** — you must turn it on in Settings and enter your own Brave Search API key.
+- **Clearly disclosed** — Settings explains what is sent before you turn it on.
 
-**When using cloud AI models, please be aware:**
+**When web search is on, please be aware:**
 
-- Your messages and conversation context **will be transmitted to the selected third-party provider's servers** for processing.
-- **We have no control over** how these third-party providers handle, store, process, or retain your data.
-- **We do not act as an intermediary** — the connection is directly between your device and the third-party provider's API.
-- **API keys** you provide are stored exclusively in the iOS Keychain on your device and are never transmitted to us or any party other than the respective API provider.
-- You are solely responsible for reviewing and accepting the privacy policies and terms of service of any third-party AI provider you choose to use.
-- **We are not responsible** for any data handling, data breaches, data retention, or privacy practices of third-party AI providers.
-
-Links to third-party privacy policies:
-- OpenAI: https://openai.com/privacy
-- Anthropic: https://www.anthropic.com/privacy
-- Google: https://policies.google.com/privacy
+- When the AI model decides a question needs current information, the app sends **a short search query** (a few words the model writes) to Brave Search. Your conversations, files, memories, and settings are **not** sent.
+- The connection is **directly between your device and Brave**; we do not act as an intermediary and never receive the query.
+- Brave receives the query, your API key, and your device's network information (such as its IP address). Brave states that it keeps a record of queries submitted through a Search API account for up to 90 days for billing and troubleshooting.
+- Your API key is stored only in your device's Keychain and is sent only to Brave.
+- **We are not responsible** for how Brave handles, stores, or retains data. Brave Search API privacy notice: https://api-dashboard.search.brave.com/privacy-policy
 
 ### 1.5 Model Downloads
 
@@ -84,11 +80,13 @@ When you download AI models from the in-app model catalog, these models are down
 - All app data is stored locally on your device using Apple's SwiftData framework and iOS Keychain.
 - Data is protected by iOS's built-in encryption and security features, including device passcode, Face ID, and Touch ID protections.
 - We do not have access to any data stored on your device.
-- If you delete the app, all locally stored data (conversations, memories, settings, downloaded models) is permanently deleted.
+- If you delete the app, all locally stored data (conversations, memories, settings, and models downloaded to the app's own storage) is permanently deleted. Models stored in a folder you chose yourself (for example, a folder shared with other apps) remain there until you delete them.
 
 ### 1.7 Data Sharing
 
 **We do not share any data with any third party for any purpose.** There are no data sharing agreements, no data partnerships, no data sales, and no data transfers of any kind initiated by us.
+
+If you choose to contact us — for example with the in-app "Report Response" option, which opens an email you can review before sending — we receive only what you put in that email and use it only to respond and improve the app.
 
 ### 1.8 Children's Privacy
 
@@ -100,7 +98,7 @@ Since we collect no data, there is no data retention policy applicable to us. Al
 
 ### 1.10 Data Portability
 
-You may export your conversation data and memories at any time using the Export Data feature in the app's Settings. The exported data is provided in JSON format.
+You may export your data at any time. On iPhone and iPad, each conversation can be exported in full (Markdown or JSON) from the conversation list. The Export Data feature in Settings exports your conversation list and memories in JSON format.
 
 ---
 
@@ -112,7 +110,7 @@ By downloading, installing, or using Mylokai, you acknowledge that you have read
 
 ### 2.2 Description of Service
 
-Mylokai is a mobile application that provides an interface for interacting with artificial intelligence language models. The app supports on-device AI inference and optional connections to third-party cloud AI services. The app is provided for general informational and conversational purposes only.
+Mylokai is an application for iPhone, iPad, and Mac that provides an interface for interacting with artificial intelligence language models. All AI inference runs on your device, using Apple's on-device models or open models you download. The app offers optional web search through Brave Search. The app is provided for general informational and conversational purposes only.
 
 ### 2.3 License
 
@@ -123,11 +121,12 @@ We grant you a limited, non-exclusive, non-transferable, revocable license to us
 You are solely responsible for:
 
 - All content you input into the app, including messages, documents, and API keys.
-- Your use of any third-party cloud AI services, including compliance with their terms of service and acceptable use policies.
+- Your use of the optional Brave Search web search, including compliance with Brave's terms of service.
 - Ensuring that your use of the app complies with all applicable laws and regulations in your jurisdiction.
 - Any consequences arising from actions taken based on AI-generated content.
 - Maintaining the security of your device and any API keys stored within the app.
-- Any costs, charges, or fees incurred from the use of third-party API services (OpenAI, Anthropic, Google, etc.).
+- Any costs, charges, or fees incurred from your Brave Search API account.
+- Complying with the license and acceptable use terms of any AI model you download (shown in the app under Licenses).
 
 ### 2.5 Prohibited Uses
 
@@ -142,7 +141,7 @@ You agree not to use Mylokai to:
 
 ### 2.6 Intellectual Property
 
-The Mylokai app, including its design, code, graphics, and user interface, is the intellectual property of the Developer. Third-party AI models downloaded through the app are subject to their respective licenses (typically Apache 2.0, MIT, or similar open-source licenses as specified by the model creators on HuggingFace).
+The Mylokai app, including its design, code, graphics, and user interface, is the intellectual property of the Developer. Third-party AI models downloaded through the app are subject to their respective licenses as specified by their publishers (for example Apache 2.0, MIT, the Llama 3.2 Community License, or the LFM Open License). The app lists each model's license under Settings > Licenses.
 
 ### 2.7 Termination
 
@@ -191,7 +190,7 @@ We reserve the right to modify these Terms and Conditions at any time. Changes w
 - Damages resulting from unauthorized access to or alteration of your data
 - Damages resulting from the conduct of any third party in connection with the app
 - Damages resulting from any errors, mistakes, or inaccuracies in AI-generated content
-- Damages arising from the use of third-party AI services connected through the app
+- Damages arising from the use of third-party services used by the app, such as web search
 - Damages resulting from loss or corruption of locally stored data
 - Any other matter relating to the app
 
@@ -205,8 +204,9 @@ You agree to defend, indemnify, and hold harmless the Developer from and against
 
 The Developer is not responsible for and makes no representations or warranties regarding any third-party services, including but not limited to:
 
-- Third-party AI providers (OpenAI, Anthropic, Google, and any others)
+- Brave Search, when you turn on the optional web search
 - HuggingFace model hosting and downloads
+- The publishers of the open AI models listed in the app
 - Apple's FoundationModels framework and on-device AI capabilities
 - Any other third-party service, API, or platform
 
@@ -224,7 +224,7 @@ Your use of any third-party service is at your own risk and subject to that thir
 
 ### 3.7 Accuracy and Reliability Disclaimer
 
-The Developer makes no representations or warranties about the accuracy, reliability, completeness, or timeliness of any content generated by the AI models, whether on-device or cloud-based. AI models are probabilistic systems that can and do produce incorrect, inconsistent, and fabricated information.
+The Developer makes no representations or warranties about the accuracy, reliability, completeness, or timeliness of any content generated by the AI models or of any web search results. AI models are probabilistic systems that can and do produce incorrect, inconsistent, and fabricated information.
 
 ### 3.8 Availability Disclaimer
 
@@ -253,7 +253,7 @@ As Mylokai **does not collect, process, store, or transmit any personal data**, 
 
 **Data Protection Impact Assessment (Article 35):** Not required as we do not process personal data.
 
-**International Data Transfers (Chapter V):** No personal data is transferred internationally by us. If you choose to use third-party cloud AI services, data transfers to those providers are governed by their respective privacy policies and data transfer mechanisms.
+**International Data Transfers (Chapter V):** No personal data is transferred internationally by us. If you turn on the optional web search, search queries are sent to Brave Search and are governed by Brave's privacy notice and data transfer mechanisms.
 
 **Data Breach Notification (Articles 33-34):** As we hold no personal data, a data breach of user data from our systems is not possible. However, users should be aware that data stored locally on their device is subject to the security of that device.
 
@@ -277,7 +277,7 @@ Mylokai is classified as a **general-purpose AI application** that provides a us
 - AI-generated content is not represented as human-generated.
 
 **General-Purpose AI Models (Article 51-56):**
-- Mylokai is not a provider of AI models — it is an application that utilizes AI models developed by third parties (Apple, open-source community via HuggingFace, and optionally cloud AI providers).
+- Mylokai is not a provider of AI models — it is an application that runs AI models developed by third parties (Apple, and open models published on HuggingFace) on your device.
 - The respective model providers are responsible for compliance with GPAI model obligations under the EU AI Act.
 
 **Prohibited Practices (Article 5):** Mylokai is not designed for, and must not be used for, any prohibited AI practices, including:
@@ -343,16 +343,18 @@ Mylokai does **not** track users across other companies' apps or websites. The a
 ### 5.2 Apple Privacy Nutrition Labels
 
 In accordance with Apple's App Privacy requirements:
-- **Data Not Collected:** Mylokai does not collect any data from users.
-- **Data Not Linked to You:** No data is linked to your identity.
+- **Search History (optional web search only):** if you turn on web search, search queries are sent to Brave Search to provide results. This data is not linked to your identity and is not used to track you.
+- **No other data is collected.**
 - **Data Not Used to Track You:** No tracking occurs.
 
 ### 5.3 Required Device Permissions
 
 Mylokai may request the following device permissions, which are used exclusively for on-device functionality:
 
-- **Microphone Access:** Used solely for on-device speech-to-text input. Audio is processed locally using Apple's Speech framework and is never transmitted externally.
-- **Speech Recognition:** Used solely for on-device transcription of voice input. Processing occurs entirely on your device.
+- **Microphone Access:** Used solely for on-device speech-to-text input. Audio is processed locally and is never transmitted externally.
+- **Speech Recognition:** Used solely for on-device transcription of voice input. If on-device recognition is unavailable, voice input is turned off rather than sent to a server.
+- **Camera:** Used solely to capture documents and images you choose to attach in a chat. Images are processed on your device.
+- **Photo Library:** Used solely to attach images you choose. Images are processed on your device.
 
 These permissions are optional and the app is fully functional without them.
 
@@ -389,7 +391,7 @@ For users in the European Union, nothing in these terms affects your statutory r
 
 ---
 
-*This document was last reviewed and updated on March 5, 2026.*
+*This document was last reviewed and updated on September 22, 2026.*
 
-*Mylokai is an independent application and is not affiliated with, endorsed by, or sponsored by Apple Inc., OpenAI, Anthropic, Google, or HuggingFace, except as a developer utilizing their publicly available platforms, frameworks, and APIs.*
+*Mylokai is an independent application and is not affiliated with, endorsed by, or sponsored by Apple Inc., Brave Software, Hugging Face, or the publishers of the AI models listed in the app. Model and company names and logos are shown only to identify the source of each model. Apple Intelligence is a trademark of Apple Inc.*
 
